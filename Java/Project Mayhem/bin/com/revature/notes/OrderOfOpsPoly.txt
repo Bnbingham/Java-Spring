@@ -1,0 +1,9 @@
+Polymorphism overloading order of operations
+
+		1. Exact match -Type/numberOfArgs
+				
+		2. Conversion - Primatives/objects that cast themselves into other types
+				
+		3. Boxing/unboxing - Going from primative to object or visa versa
+		
+		4. Varargs - Arguments wrapped into arrays

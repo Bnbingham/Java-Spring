@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.reveture.model.PokemonType" table="Pokemon_Type">
+		<id name="id" column="PT_id" type="int">
+			<generator class="native" />
+		</id>
+		
+		<property name="element" column="PT_element" type="string"></property>
+	</class>
+</hibernate-mapping>

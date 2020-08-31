@@ -1,0 +1,22 @@
+Variable scope
+	only variables have scopes "life-span of a variable"
+	No global scopes in Java
+	{} - define scope
+	
+	static or class scope
+		Accessible to all members of a class
+		Static variable will exist as long as the class is loaded into the compiler
+		get default values
+	Method or local scope
+		Accessible within the method it is declared in
+		Do not get default value, defined values are required
+	Block scope
+		Accessible within code block, common within control statements
+		Do not get default values
+	Instance block
+		Accessible only inside of a particular object
+		Get default values
+		
+	Shadowing
+		When variables in different scopes have the same identifier; ex. setter methods setAge(int age){this.age=age};
+		can happen between superclass and subclass variables

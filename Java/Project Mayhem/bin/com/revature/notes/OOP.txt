@@ -1,0 +1,20 @@
+Object oriented programming
+	Inheritance
+		When a programming language allows for a hierarchy of objects
+		Child objects obtain states and behaviors from parents objects.
+		Classes can only inherit from one single class. **Diamond problem**
+	Encapsulation
+		When you wrap and protect related data from outside manipulation
+		usually requires Getters(accessors) Setters(Manipulators) 
+	Polymorphism
+		The ability for a programming language to be able to tell the diff between objects of the same type.
+		Overriding - Same name, same parameters, diff behavior. @Override a commonly named method to return something diff of the same type
+		Overloading - Same name, diff parameters. 
+			Parametric Polymorphism - The ability for the complier to determine which method to call based on the inputs given
+		Multiple "is-a" relationships Object>Animal>Cat
+			Covariance - every cat is an animal
+			Contravariance - every animal is not a cat
+	Abstraction 
+		Often omitted as one of the pillars of OOP
+		Hiding the implementation details.  "What is does, not how it does it"
+		Abstract class - have no implementation

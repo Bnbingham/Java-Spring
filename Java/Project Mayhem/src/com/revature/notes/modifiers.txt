@@ -1,0 +1,33 @@
+Access Modifiers
+
+	Public
+		any class in the package or anything referencing the package can access
+		classes, variables, methods, and constructors
+		
+	Private
+		class level access
+		variable, methods, inner classes, and constructors(singleton design pattern)
+		
+	Protected
+		accessible through inheritance or within package
+		A child class of a super class with a protected method will be able to inherit the protected members of that class.
+		variable, methods, inner classes, and constructors
+		
+	Default aka "Package private"
+		don't use default keyword
+		Package level access
+		Cannot gain access by importing the package
+		
+	**You can have one public class per file, but you can have multiple public entities within the class. To help Java compiler.**
+	
+Other modifiers
+
+	Static
+		Belongs to the class
+		Variables, methods, code blocks, and inner classes
+	Final **make sure to mention all three**
+		Variable - value cannot be changed once initialized
+		Method - cannot be overridden
+		Class - cannot be extended
+		
+	**Static and Final variable - A constant variable ex. PI**

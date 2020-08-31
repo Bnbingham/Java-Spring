@@ -1,0 +1,22 @@
+Data types
+	https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+	Primative types - a value; 8 total
+		char
+		boolean
+		byte
+		short
+		int
+		long
+		float
+		double
+	Reference types - an object; more than just a value
+		arrays
+
+Numeric type conversions
+	Narrowing - Going from larger memory allocation to a smaller, may result in loss of percision
+	Widening - 	going from smaller to larger
+Casting
+	Manually changing the data type; ex. a=(int)b 
+Java is a passes by value language.
+	it passes the value of the reference rather than the reference themselves
+		

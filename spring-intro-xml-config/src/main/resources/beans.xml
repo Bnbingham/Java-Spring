@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+                    
+    <!--   Provide the bean definition for out coach implementation -->
+    <bean id="myCoach" class="com.revature.models.TrackCoach" scope="singleton">
+    	<!-- Inject the motivationService dependency using constructor injection -->
+    	<constructor-arg ref="myMotivationService"/>
+    </bean>
+    
+    <!-- 
+    	Scopes of spring bean
+    		singleton		(default) only one instance for all references
+    		prototype		one instance for each reference
+    		
+    		below can only be used with a .war
+    		creates an instance in the IoC container
+    		request			one instance for each HTTP request
+    		session			one instance for each session
+    		glabalSession	one instance for all HTTP sessions
+    		
+    		Spring5 below, just fyi
+    		singleton
+    		prototype
+    		request
+    		session
+    		application		ties the instance of the lifecycle of a servlet context
+    		websocket		ties the instance to the lifecycle of a websocket
+    		(websockets are open channels for http communications)
+    		
+    	autowiring
+    		decides how things are injected
+    		constructor			going to look for the datatype inside the constructor parameters and
+    							inject the spring bean into the appropriate argument.
+    							
+    		byType				setter injection determined by the type of the dependency
+    		byName				setter injection determined by the type of the dependency
+    		no 					autowiring is turned off (default)
+    		
+    		<bean id="myCoach" class="com.revature.model.TrackCoach" scope="singleton" autowire="constructor" />
+    			
+     -->
+    
+    <bean id="myMotivationService" class="com.revature.services.MotivationServiceImpl" />
+    
+    <bean id="myFootballCoach" class="com.revature.models.FootballCoach" init-method="customInit" destroy-method="customDestroy">
+    	<property name="motivationService" ref="myMotivationService" />
+    	<property  name="email" value="${coach.email}" />
+    	<property  name="team" value="${coach.team}" />
+    </bean>
+                    
+	<context:property-placeholder location="classpath:app.properties" />                    
+</beans>    

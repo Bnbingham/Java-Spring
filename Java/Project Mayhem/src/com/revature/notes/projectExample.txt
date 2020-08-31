@@ -1,0 +1,8 @@
+Game
+Warrior -bean
+		-Name
+		-hp
+		-AttackPower
+Fight	
+		TakeDdamage
+		Dead-remove from Array

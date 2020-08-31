@@ -1,0 +1,12 @@
+Threads
+	When you start a program three threads are created
+	Main
+	Garbage
+		Daemon Thread= we don't interact with or control tehses they are low-priority
+		Intermitently removes dereferenced objects from memory
+		Cannot forceCollections but can request for it to run
+	System.gc() // asks for the garbage collector to help
+		We can intervene with the process of garbage collection
+			Override java.lang.Object.finalize();
+			to specify behavior at the time of garbage collection
+		Difference between final, finalize() and finally?

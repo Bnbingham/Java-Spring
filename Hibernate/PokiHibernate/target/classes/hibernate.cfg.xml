@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- JDBC Connection Factory -->
+		<property name="hibernate.connection.username">cardealership</property>
+		<property name="hibernate.connection.password">Pa55word</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@java2004usf.c3ze8kvqgwxn.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+		<property name="hibernate.configurations.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		
+		<!-- Depending on the Database engine, switch dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- Auto generate/update schema -->
+		<property name="hibernate.hbm.ddl.auto">update</property>
+		
+	</session-factory>
+</hibernate-configuration>
